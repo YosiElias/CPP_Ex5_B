@@ -36,10 +36,12 @@ namespace ariel {
         public:
             std::shared_ptr<Man> pointer_to_current_man;
             queue<std::shared_ptr<Man>> queue_man;
+            bool first;
 
             iterator_level(std::shared_ptr<Man> ptr = nullptr)    //Todo: need to change to nullptr and not &
                     : pointer_to_current_man(ptr) {
                 this->queue_man.push(ptr);
+                this->first = true;
             }
 
 //            ~iterator_level(){
@@ -66,6 +68,10 @@ namespace ariel {
                     for (int i = 0; i < this->pointer_to_current_man->get_Pchildren().size(); ++i) {
                         this->queue_man.push(this->pointer_to_current_man->get_Pchildren().at(i));
                     }
+                    if (first){ // one recursive in case of first time
+                        first = false;
+                        ++(*this);
+                    }
                 }
                 return *this;
             }
@@ -82,6 +88,10 @@ namespace ariel {
                     this->queue_man.pop();
                     for (int i = 0; i < this->pointer_to_current_man->get_Pchildren().size(); ++i) {
                         this->queue_man.push(this->pointer_to_current_man->get_Pchildren().at(i));
+                    }
+                    if (first){ // one recursive in case of first time
+                        first = false;
+                        (*this)++;
                     }
                 }
                 return tmp;
@@ -153,6 +163,7 @@ namespace ariel {
         public:
             std::shared_ptr<Man> pointer_to_current_man;
             stack<std::shared_ptr<Man>> stack_man;
+            bool first;
 
             iterator_preorder(std::shared_ptr<Man> ptr);    //Todo: need to change to nullptr and not &
 

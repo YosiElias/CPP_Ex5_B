@@ -33,7 +33,7 @@ int main() {
        VP_SW             VP_BI
  */
     cout << "--------  level_order  --------"<<endl;
-    for (auto it = organization.begin_level_order(); it != organization.end_level_order(); ++it)
+    for (auto it = organization.begin_level_order(); it != organization.end_level_order(); it++)
     {
         cout << (*it) << " " ;
     } // prints: CEO CTO CFO COO VP_SW VP_BI
@@ -43,7 +43,7 @@ int main() {
         cout << (*it) << " " ;
     } // prints: VP_SW VP_BI CTO CFO COO CEO
     cout << endl<< "--------  preorder --------"<<endl;
-    for (auto it=organization.begin_preorder(); it!=organization.end_preorder(); ++it) {
+    for (auto it=organization.begin_preorder(); it!=organization.end_preorder(); it++) {
         cout << (*it) << " " ;
     }  // prints: CEO CTO VP_SW CFO COO VP_BI
     cout << endl << "--------  level_order  --------"<<endl;

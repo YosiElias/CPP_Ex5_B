@@ -109,6 +109,7 @@ namespace ariel{
     OrgChart::iterator_preorder::iterator_preorder(std::shared_ptr<Man> ptr) {
         pointer_to_current_man = ptr;
         this->stack_man.push(ptr);
+        first = true;
     }
 
     OrgChart::iterator_preorder &OrgChart::iterator_preorder::operator++() {
@@ -121,6 +122,10 @@ namespace ariel{
         for(int i = pointer_to_current_man->get_Pchildren().size() - 1; i >= 0; i--){
 //            for (int i = 0; i < tmp->get_Pchildren().size(); ++i) {   //Todo: dbs: if need revers in this order
             this->stack_man.push(pointer_to_current_man->get_Pchildren().at(size_t(i)));
+        }
+        if (first){ // one recursive in case of first time
+            first = false;
+            ++(*this);
         }
         return *this;
     }
@@ -136,6 +141,10 @@ namespace ariel{
         for(int i = pointer_to_current_man->get_Pchildren().size() - 1; i >= 0; i--){
 //            for (int i = 0; i < tmp->get_Pchildren().size(); ++i) {   //Todo: dbs: if need revers in this order
             this->stack_man.push(pointer_to_current_man->get_Pchildren().at(size_t(i)));
+        }
+        if (first){ // one recursive in case of first time
+            first = false;
+            (*this)++;
         }
         return tmp;
     }
