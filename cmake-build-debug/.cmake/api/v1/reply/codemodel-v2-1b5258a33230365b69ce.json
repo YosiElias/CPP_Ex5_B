@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "Part_A",
+					"name" : "Prat_B2",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "Part_A::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Part_A-Debug-c8a2f444760f8cb93021.json",
-					"name" : "Part_A",
+					"id" : "Prat_B2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Prat_B2-Debug-4ce0f071e185bd7674e0.json",
+					"name" : "Prat_B2",
 					"projectIndex" : 0
 				}
 			]

@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: Part_A
+# Project: Prat_B2
 # Configurations: Debug
 # =============================================================================
 
@@ -40,6 +40,51 @@ include CMakeFiles/rules.ninja
 # Logical path to working directory; prefix for absolute paths.
 
 cmake_ninja_workdir = C$:/Users/Aviva/Desktop/C++/Ex5/Part$ B/cmake-build-debug/
+# =============================================================================
+# Object build statements for EXECUTABLE target Prat_B2
+
+
+#############################################
+# Order-only phony target for Prat_B2
+
+build cmake_object_order_depends_target_Prat_B2: phony || CMakeFiles/Prat_B2.dir
+
+build CMakeFiles/Prat_B2.dir/main.cpp.obj: CXX_COMPILER__Prat_B2_Debug C$:/Users/Aviva/Desktop/C++/Ex5/Part$ B/main.cpp || cmake_object_order_depends_target_Prat_B2
+  DEP_FILE = CMakeFiles\Prat_B2.dir\main.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Prat_B2.dir
+  OBJECT_FILE_DIR = CMakeFiles\Prat_B2.dir
+
+build CMakeFiles/Prat_B2.dir/sources/Man.cpp.obj: CXX_COMPILER__Prat_B2_Debug C$:/Users/Aviva/Desktop/C++/Ex5/Part$ B/sources/Man.cpp || cmake_object_order_depends_target_Prat_B2
+  DEP_FILE = CMakeFiles\Prat_B2.dir\sources\Man.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Prat_B2.dir
+  OBJECT_FILE_DIR = CMakeFiles\Prat_B2.dir\sources
+
+build CMakeFiles/Prat_B2.dir/sources/OrgChart.cpp.obj: CXX_COMPILER__Prat_B2_Debug C$:/Users/Aviva/Desktop/C++/Ex5/Part$ B/sources/OrgChart.cpp || cmake_object_order_depends_target_Prat_B2
+  DEP_FILE = CMakeFiles\Prat_B2.dir\sources\OrgChart.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Prat_B2.dir
+  OBJECT_FILE_DIR = CMakeFiles\Prat_B2.dir\sources
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Prat_B2
+
+
+#############################################
+# Link the executable Prat_B2.exe
+
+build Prat_B2.exe: CXX_EXECUTABLE_LINKER__Prat_B2_Debug CMakeFiles/Prat_B2.dir/main.cpp.obj CMakeFiles/Prat_B2.dir/sources/Man.cpp.obj CMakeFiles/Prat_B2.dir/sources/OrgChart.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Prat_B2.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Prat_B2.exe
+  TARGET_IMPLIB = libPrat_B2.dll.a
+  TARGET_PDB = Prat_B2.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -50,63 +95,6 @@ build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
   restat = 1
 
 build edit_cache: phony CMakeFiles/edit_cache.util
-
-# =============================================================================
-# Object build statements for EXECUTABLE target Part_A
-
-
-#############################################
-# Order-only phony target for Part_A
-
-build cmake_object_order_depends_target_Part_A: phony || CMakeFiles/Part_A.dir
-
-build CMakeFiles/Part_A.dir/Demo.cpp.obj: CXX_COMPILER__Part_A_Debug C$:/Users/Aviva/Desktop/C++/Ex5/Part$ B/Demo.cpp || cmake_object_order_depends_target_Part_A
-  DEP_FILE = CMakeFiles\Part_A.dir\Demo.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\Part_A.dir
-  OBJECT_FILE_DIR = CMakeFiles\Part_A.dir
-
-build CMakeFiles/Part_A.dir/sources/OrgChart.cpp.obj: CXX_COMPILER__Part_A_Debug C$:/Users/Aviva/Desktop/C++/Ex5/Part$ B/sources/OrgChart.cpp || cmake_object_order_depends_target_Part_A
-  DEP_FILE = CMakeFiles\Part_A.dir\sources\OrgChart.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\Part_A.dir
-  OBJECT_FILE_DIR = CMakeFiles\Part_A.dir\sources
-
-build CMakeFiles/Part_A.dir/sources/Man.cpp.obj: CXX_COMPILER__Part_A_Debug C$:/Users/Aviva/Desktop/C++/Ex5/Part$ B/sources/Man.cpp || cmake_object_order_depends_target_Part_A
-  DEP_FILE = CMakeFiles\Part_A.dir\sources\Man.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\Part_A.dir
-  OBJECT_FILE_DIR = CMakeFiles\Part_A.dir\sources
-
-build CMakeFiles/Part_A.dir/TestCounter.cpp.obj: CXX_COMPILER__Part_A_Debug C$:/Users/Aviva/Desktop/C++/Ex5/Part$ B/TestCounter.cpp || cmake_object_order_depends_target_Part_A
-  DEP_FILE = CMakeFiles\Part_A.dir\TestCounter.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\Part_A.dir
-  OBJECT_FILE_DIR = CMakeFiles\Part_A.dir
-
-build CMakeFiles/Part_A.dir/Test.cpp.obj: CXX_COMPILER__Part_A_Debug C$:/Users/Aviva/Desktop/C++/Ex5/Part$ B/Test.cpp || cmake_object_order_depends_target_Part_A
-  DEP_FILE = CMakeFiles\Part_A.dir\Test.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\Part_A.dir
-  OBJECT_FILE_DIR = CMakeFiles\Part_A.dir
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target Part_A
-
-
-#############################################
-# Link the executable Part_A.exe
-
-build Part_A.exe: CXX_EXECUTABLE_LINKER__Part_A_Debug CMakeFiles/Part_A.dir/Demo.cpp.obj CMakeFiles/Part_A.dir/sources/OrgChart.cpp.obj CMakeFiles/Part_A.dir/sources/Man.cpp.obj CMakeFiles/Part_A.dir/TestCounter.cpp.obj CMakeFiles/Part_A.dir/Test.cpp.obj
-  FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\Part_A.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_FILE = Part_A.exe
-  TARGET_IMPLIB = libPart_A.dll.a
-  TARGET_PDB = Part_A.exe.dbg
 
 
 #############################################
@@ -123,7 +111,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build Part_A: phony Part_A.exe
+build Prat_B2: phony Prat_B2.exe
 
 # =============================================================================
 # Folder targets.
@@ -133,7 +121,7 @@ build Part_A: phony Part_A.exe
 #############################################
 # Folder: C:/Users/Aviva/Desktop/C++/Ex5/Part B/cmake-build-debug
 
-build all: phony Part_A.exe
+build all: phony Prat_B2.exe
 
 # =============================================================================
 # Built-in targets
