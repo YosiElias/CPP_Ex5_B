@@ -34,10 +34,7 @@ namespace ariel{
     }
 
     std::ostream &operator<<(ostream &output, OrgChart &c) {
-        for (auto it = c.begin_level_order(); it != c.end_level_order(); ++it){
-            output << *it<< " - ";
-        }
-        output << endl;
+        c._root->print(output, 1);
         return output;
     }
 

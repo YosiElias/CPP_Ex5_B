@@ -14,8 +14,6 @@
 
 namespace ariel {
     class Man{
-//    private:
-
 
     public:
         std::vector<std::shared_ptr<Man>> _Pchildren;   //use public for internal use of the class
@@ -28,6 +26,16 @@ namespace ariel {
         std::string get_name() const{return this->_name;};
         std::vector<std::shared_ptr<Man>> get_Pchildren() const{return this->_Pchildren;};
         void set_father(const std::shared_ptr<Man>& Pfather){ this->_Pfather = Pfather;};
+        void print(std::ostream &output, int level) {
+            for (int i = 1; i < level; i++) {
+                output << "\t";
+            }
+            output <<"|------"<< _name <<"\n";
+            for (const auto& child : this->_Pchildren) {
+                child->print(output, level + 1);
+            }
+        }
+
     };
 }
 
